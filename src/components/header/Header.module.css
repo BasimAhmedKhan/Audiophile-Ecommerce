@@ -1,0 +1,30 @@
+.nav {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.nav li {
+    letter-spacing: 2px;
+    margin-right: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav li:hover{
+    color: hsl(22, 64%, 57%);
+}
+
+.title {
+    height: 1.5rem;
+    width: 9rem;
+    margin-right: 0rem;
+}
+
+.cart{
+    float: right;
+}
