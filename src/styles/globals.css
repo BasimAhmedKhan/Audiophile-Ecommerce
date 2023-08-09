@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&display=swap');
 
+:root{
+    --grey: rgba(255,255,255,0.5);
+    --orange: hsl(22, 64%, 57%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,9 +30,19 @@ body{
 }
 
 .margin{
-    margin: 0rem 9rem;
+    margin: 0rem 8rem;
 }
 
 li{
     list-style-type: none;
 }
+
+h1{
+    font-size: 3.5rem;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+

@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Divider } from 'antd';
 import styles from '@/styles/Home.module.css'
-import Header from '@/components/header/Header';
+import Btn from '@/components/button/Btn'
 
 export default function Home() {
   return (
@@ -15,8 +14,12 @@ export default function Home() {
       </Head>
       <main className='margin'>
         <section className={styles.home}>
-          
+          <strong className={styles.newProduct}>NEW PRODUCT</strong>
+          <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>
+          <p style={{color: 'var(--grey)'}}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+          <Btn size={'large'} text={'SEE PRODUCT'}/>
         </section>
+        
       </main>
     </>
   )

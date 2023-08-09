@@ -1,10 +1,12 @@
 .nav {
-    height: 5rem;
+    height: 5.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
+    border-bottom: 1px solid rgb(61, 61, 61);
+    margin-bottom: 8rem;
 }
 
 .nav li {
@@ -16,15 +18,11 @@
 }
 
 .nav li:hover{
-    color: hsl(22, 64%, 57%);
+    color: var(--orange);
 }
 
 .title {
     height: 1.5rem;
     width: 9rem;
     margin-right: 0rem;
-}
-
-.cart{
-    float: right;
 }

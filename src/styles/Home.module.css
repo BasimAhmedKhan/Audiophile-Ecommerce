@@ -1,0 +1,17 @@
+.home{
+    height: 100vh;
+    width: 23rem;
+}
+
+.home>*{
+    margin-bottom: 1rem;
+}
+
+.newProduct{
+    color: var(--grey);
+    letter-spacing: 0.5rem;
+}
+
+.white{
+    color: white;
+}
