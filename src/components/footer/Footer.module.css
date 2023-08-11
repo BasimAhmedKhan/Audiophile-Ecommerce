@@ -1,0 +1,30 @@
+.footer{
+    height: 23rem;
+    width: 100%;
+    background-color: var(--black);
+    color: white;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footerDetailContainer{
+    height: 50%;
+}
+
+.footerDetailContainer>*{
+    width: 50%;
+}
+
+.footerDetail{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social{
+    justify-content: flex-end;
+}
+
+.social>*{
+    margin-right: 1rem;
+    color: white;
+}
