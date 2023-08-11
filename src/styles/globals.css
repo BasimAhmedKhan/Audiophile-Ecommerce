@@ -3,6 +3,7 @@
 :root{
     --grey: rgba(255,255,255,0.5);
     --orange: hsl(22, 64%, 57%);
+    --black: #191919;
 }
 
 * {
@@ -44,5 +45,10 @@ h1{
 p{
     font-size: 1rem;
     line-height: 1.5;
+    color: var(--grey);
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}

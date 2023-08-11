@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Btn from '@/components/button/Btn'
+import ProductCardContainer from '@/components/productCardContainer/ProductCardContainer'
 
 export default function Home() {
   return (
@@ -13,13 +14,15 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
       <main className='margin'>
-        <section className={styles.home}>
+        <section className={`${styles.home} center`}>
           <strong className={styles.newProduct}>NEW PRODUCT</strong>
           <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>
           <p style={{color: 'var(--grey)'}}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
           <Btn size={'large'} text={'SEE PRODUCT'}/>
         </section>
-        
+        <section className={styles.productShow}>
+          <ProductCardContainer />
+        </section>
       </main>
     </>
   )

@@ -1,6 +1,8 @@
 .home{
     height: 100vh;
     width: 23rem;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .home>*{
@@ -14,4 +16,8 @@
 
 .white{
     color: white;
+}
+
+.productShow{
+    height: 100vh;
 }
