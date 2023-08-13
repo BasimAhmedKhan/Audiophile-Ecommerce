@@ -1,23 +1,80 @@
-.home{
+.home {
     height: 100vh;
     width: 23rem;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.home>*{
+.home>* {
     margin-bottom: 1rem;
 }
 
-.newProduct{
+.newProduct {
     color: var(--grey);
     letter-spacing: 0.5rem;
 }
 
-.white{
+.white {
     color: white;
 }
 
-.productShow{
-    height: 100vh;
+.zx9SpeakerContainer {
+    height: 37rem;
+    width: 100%;
+    background-color: var(--orange);
+    border-radius: 0.5rem;
+    margin: 5rem 0rem;
+}
+
+.zx9Speaker {
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    background: url("./../../public/images/home/desktop/pattern-circles.svg") no-repeat;
+    background-size: 95%;
+    background-position-x: -300%;
+    background-position-y: 30%;
+    overflow: hidden;
+}
+
+.zx9Speaker>* {
+    width: 50%;
+}
+
+.zx9 {
+    height: 30rem;
+    width: 25rem;
+    position: relative;
+    bottom: -0.5rem;
+}
+
+.zx9Detail {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.zx9Detail>* {
+    margin-bottom: 1rem;
+}
+
+.zx7Speaker {
+    height: 20rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    background: url("./../../public/images/home/desktop/image-speaker-zx7.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+    margin: 5rem 0rem;
+}
+
+.zx7Speaker h2{
+    margin-bottom: 2rem;
+}
+
+.zx7Speaker>* {
+    margin-left: 4rem; 
 }

@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '@/styles/Home.module.css'
-import Btn from '@/components/button/Btn'
-import ProductCardContainer from '@/components/productCardContainer/ProductCardContainer'
+import Head from 'next/head';
+import styles from '@/styles/Home.module.css';
+import Btn from '@/components/button/Btn';
+import ProductCardContainer from '@/components/productCardContainer/ProductCardContainer';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -17,13 +17,37 @@ export default function Home() {
         <section className={`${styles.home} center`}>
           <strong className={styles.newProduct}>NEW PRODUCT</strong>
           <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>
-          <p style={{color: 'var(--grey)'}}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-          <Btn size={'large'} text={'SEE PRODUCT'}/>
+          <p style={{ color: 'var(--grey)' }}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+          <Btn bg={"orange"} size={'large'} text={'SEE PRODUCT'} />
         </section>
         <section className={styles.productShow}>
           <ProductCardContainer />
         </section>
+        <section className={styles.zx9SpeakerContainer}>
+          <div className={`${styles.zx9Speaker} center`}>
+            <div className="center">
+              <Image className={styles.zx9} src="/images/home/desktop/image-speaker-zx9.png" width={500} height={500} />
+            </div>
+            <div className={`${styles.zx9Detail} ${styles.white}`}>
+              <h1>ZX1<br />SPEAKER</h1>
+              <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+              <Btn bg={"black"} color={"white"} size={'large'} text={'SEE PRODUCT'} />
+            </div>
+          </div>
+        </section>
+        <section className={`${styles.zx7Speaker} center`}>
+          <h2>ZX7 SPEAKER</h2>
+          <Btn color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
+        </section>
+        <section className={styles.yx1Earphones}>
+          <div>
+            
+          </div>
+          <div>
+
+          </div>
+        </section>
       </main>
     </>
-  )
+  );
 }
