@@ -3,6 +3,7 @@ import styles from '@/styles/Home.module.css';
 import Btn from '@/components/button/Btn';
 import ProductCardContainer from '@/components/productCardContainer/ProductCardContainer';
 import Image from 'next/image';
+import BestGear from '@/components/bestGear/BestGear';
 
 export default function Home() {
   return (
@@ -23,29 +24,33 @@ export default function Home() {
         <section className={styles.productShow}>
           <ProductCardContainer />
         </section>
-        <section className={styles.zx9SpeakerContainer}>
-          <div className={`${styles.zx9Speaker} center`}>
+        <section className={`${styles.zx9SpeakerContainer} marginTB width100 b-radius`}>
+          <div className={`${styles.zx9Speaker} center width100 height100`}>
             <div className="center">
               <Image className={styles.zx9} src="/images/home/desktop/image-speaker-zx9.png" width={500} height={500} />
             </div>
-            <div className={`${styles.zx9Detail} ${styles.white}`}>
+            <div className={`${styles.zx9Detail} ${styles.white} height100`}>
               <h1>ZX1<br />SPEAKER</h1>
               <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
               <Btn bg={"black"} color={"white"} size={'large'} text={'SEE PRODUCT'} />
             </div>
           </div>
         </section>
-        <section className={`${styles.zx7Speaker} center`}>
+        <section className={`${styles.zx7Speaker} center marginTB width100 b-radius`}>
           <h2>ZX7 SPEAKER</h2>
           <Btn color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
         </section>
-        <section className={styles.yx1Earphones}>
+        <section className={`${styles.yx1Earphones} flex marginTB`}>
           <div>
-            
+            <Image className="height100 width100 b-radius" src="/images/home/desktop/image-earphones-yx1.jpg" width={540} height={588} />
           </div>
-          <div>
-
+          <div className={`${styles.yx1Detail} center b-radius`}>
+            <h2>YX1 EARPHONES</h2>
+            <Btn color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
           </div>
+        </section>
+        <section>
+          <BestGear />
         </section>
       </main>
     </>

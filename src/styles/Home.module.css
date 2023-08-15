@@ -5,7 +5,7 @@
     align-items: flex-start;
 }
 
-.home>* {
+.home>*, .zx9Detail>*, .yx1Detail>* {
     margin-bottom: 1rem;
 }
 
@@ -20,15 +20,10 @@
 
 .zx9SpeakerContainer {
     height: 37rem;
-    width: 100%;
     background-color: var(--orange);
-    border-radius: 0.5rem;
-    margin: 5rem 0rem;
 }
 
 .zx9Speaker {
-    height: 100%;
-    width: 100%;
     align-items: flex-end;
     background: url("./../../public/images/home/desktop/pattern-circles.svg") no-repeat;
     background-size: 95%;
@@ -49,32 +44,39 @@
 }
 
 .zx9Detail {
-    height: 100%;
     width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.zx9Detail>* {
-    margin-bottom: 1rem;
-}
-
 .zx7Speaker {
     height: 20rem;
-    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     background: url("./../../public/images/home/desktop/image-speaker-zx7.jpg") no-repeat;
     background-size: cover;
-    border-radius: 0.5rem;
-    margin: 5rem 0rem;
 }
 
-.zx7Speaker h2{
+.zx7Speaker h2 {
     margin-bottom: 2rem;
 }
 
-.zx7Speaker>* {
-    margin-left: 4rem; 
+.zx7Speaker>*, .yx1Detail>* {
+    margin-left: 4rem;
+}
+
+.yx1Earphones {
+    height: 20rem;
+    justify-content: space-between;
+}
+
+.yx1Earphones>* {
+    width: 48.5%;
+}
+
+.yx1Detail {
+    background-color: #f1f1f1;
+    flex-direction: column;
+    align-items: flex-start;
 }

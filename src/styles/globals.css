@@ -52,3 +52,19 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.marginTB{
+    margin: 5rem 0rem;
+}
+
+.width100{
+    width: 100%;
+}
+
+.height100{
+    height: 100%;
+}
+
+.b-radius{
+    border-radius: 0.5rem;
+}
