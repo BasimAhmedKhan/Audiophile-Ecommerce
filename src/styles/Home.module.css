@@ -5,10 +5,6 @@
     align-items: flex-start;
 }
 
-.home>*, .zx9Detail>*, .yx1Detail>* {
-    margin-bottom: 1rem;
-}
-
 .newProduct {
     color: var(--grey);
     letter-spacing: 0.5rem;
@@ -56,10 +52,6 @@
     align-items: flex-start;
     background: url("./../../public/images/home/desktop/image-speaker-zx7.jpg") no-repeat;
     background-size: cover;
-}
-
-.zx7Speaker h2 {
-    margin-bottom: 2rem;
 }
 
 .zx7Speaker>*, .yx1Detail>* {

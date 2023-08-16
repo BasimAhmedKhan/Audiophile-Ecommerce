@@ -68,3 +68,7 @@ a{
 .b-radius{
     border-radius: 0.5rem;
 }
+
+.childsMargin>*{
+    margin-bottom: 1rem;
+}

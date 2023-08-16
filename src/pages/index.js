@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
       <main className='margin'>
-        <section className={`${styles.home} center`}>
+        <section className={`${styles.home} center childsMargin`}>
           <strong className={styles.newProduct}>NEW PRODUCT</strong>
           <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>
           <p style={{ color: 'var(--grey)' }}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
@@ -29,14 +29,14 @@ export default function Home() {
             <div className="center">
               <Image className={styles.zx9} src="/images/home/desktop/image-speaker-zx9.png" width={500} height={500} />
             </div>
-            <div className={`${styles.zx9Detail} ${styles.white} height100`}>
+            <div className={`${styles.zx9Detail} ${styles.white} height100 childsMargin`}>
               <h1>ZX1<br />SPEAKER</h1>
               <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
               <Btn bg={"black"} color={"white"} size={'large'} text={'SEE PRODUCT'} />
             </div>
           </div>
         </section>
-        <section className={`${styles.zx7Speaker} center marginTB width100 b-radius`}>
+        <section className={`${styles.zx7Speaker} center marginTB width100 b-radius childsMargin`}>
           <h2>ZX7 SPEAKER</h2>
           <Btn color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
         </section>
@@ -44,7 +44,7 @@ export default function Home() {
           <div>
             <Image className="height100 width100 b-radius" src="/images/home/desktop/image-earphones-yx1.jpg" width={540} height={588} />
           </div>
-          <div className={`${styles.yx1Detail} center b-radius`}>
+          <div className={`${styles.yx1Detail} center b-radius childsMargin`}>
             <h2>YX1 EARPHONES</h2>
             <Btn color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
           </div>
