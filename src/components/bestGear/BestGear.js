@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BestGear() {
     return (
-        <div className="bestGear flex marginTB width100" style={{height: '37rem'}} >
+        <div className="bestGear flex marginTB" style={{height: '37rem'}} >
             <div className="detail flex height100 childsMargin" style={{flexDirection: 'column', justifyContent: 'center', width: '50%'}}>
                 <h2 style={{ fontSize: '2.5rem' }}>BRINGING YOU THE <span style={{ color: 'var(--orange)' }}>BEST</span> AUDIO GEAR</h2>
                 <p style={{color: 'rgba(0,0,0,0.5)', width: '90%'}}>

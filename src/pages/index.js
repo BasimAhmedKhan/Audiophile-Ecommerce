@@ -14,17 +14,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/icon.png" />
       </Head>
-      <main className='margin'>
-        <section className={`${styles.home} center childsMargin`}>
-          <strong className={styles.newProduct}>NEW PRODUCT</strong>
-          <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>
-          <p style={{ color: 'var(--grey)' }}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-          <Btn bg={"orange"} size={'large'} text={'SEE PRODUCT'} />
+      <main>
+        <section className={`${styles.homeContainer}`}>
+          <div className={`${styles.home} center childsMargin margin`}>
+            <strong className={styles.newProduct}>NEW PRODUCT</strong>
+            <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>
+            <p style={{ color: 'var(--grey)' }}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+            <Btn bg={"orange"} size={'large'} text={'SEE PRODUCT'} />
+          </div>
         </section>
-        <section className={styles.productShow}>
+        <section className={`${styles.productShow} margin`}>
           <ProductCardContainer />
         </section>
-        <section className={`${styles.zx9SpeakerContainer} marginTB width100 b-radius`}>
+        <section className={`${styles.zx9SpeakerContainer} marginTB b-radius`}>
           <div className={`${styles.zx9Speaker} center width100 height100`}>
             <div className="center">
               <Image className={styles.zx9} src="/images/home/desktop/image-speaker-zx9.png" width={500} height={500} />
@@ -36,13 +38,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={`${styles.zx7Speaker} center marginTB width100 b-radius childsMargin`}>
+        <section className={`${styles.zx7Speaker} center marginTB b-radius childsMargin`}>
           <h2>ZX7 SPEAKER</h2>
           <Btn color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
         </section>
-        <section className={`${styles.yx1Earphones} flex marginTB`}>
+        <section className={`${styles.yx1Earphones} flex margin`}>
           <div>
-            <Image className="height100 width100 b-radius" src="/images/home/desktop/image-earphones-yx1.jpg" width={540} height={588} />
+            <Image className="height100 b-radius" src="/images/home/desktop/image-earphones-yx1.jpg" width={540} height={588} />
           </div>
           <div className={`${styles.yx1Detail} center b-radius childsMargin`}>
             <h2>YX1 EARPHONES</h2>

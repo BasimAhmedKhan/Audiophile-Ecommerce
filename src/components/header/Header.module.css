@@ -1,6 +1,9 @@
+.header{
+    background-color: var(--black);
+}
+
 .nav {
     height: 5.5rem;
-    width: 100%;
     background-color: var(--black);
     display: flex;
     justify-content: space-between;
