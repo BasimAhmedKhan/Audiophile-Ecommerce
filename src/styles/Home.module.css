@@ -13,11 +13,6 @@
     align-items: flex-start;
 }
 
-.newProduct {
-    color: var(--grey);
-    letter-spacing: 0.5rem;
-}
-
 .white {
     color: white;
 }

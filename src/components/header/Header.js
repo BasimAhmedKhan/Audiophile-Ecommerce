@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './Header.module.css';
 import { Popover } from 'antd';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
+import Link from 'next/link';
 
 export default function Header({ footer }) {
     const text = <span>Items</span>;
@@ -21,10 +22,10 @@ export default function Header({ footer }) {
                     <li><Image className={styles.title} src={'./images/shared/desktop/logo.svg'} width={100} height={100} /></li>
                 </ul>
                 <ul className='center'>
-                    <li>HOME</li>
-                    <li>HEADPHONES</li>
-                    <li>SPEAKERS</li>
-                    <li>EARPHONES</li>
+                    <li><Link className="white" href="/">HOME</Link></li>
+                    <li><Link className="white" href="/headphones">HEADPHONES</Link></li>
+                    <li><Link className="white" href="/speakers">SPEAKERS</Link></li>
+                    <li><Link className="white" href="/earphones">EARPHONES</Link></li>
                 </ul>
                 <ul style={{ display: footer ? 'none' : 'block' }}>
                     <li>

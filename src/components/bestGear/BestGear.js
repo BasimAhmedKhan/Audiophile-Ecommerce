@@ -17,6 +17,7 @@ export default function BestGear() {
                 src="/images/shared/desktop/image-best-gear.jpg"
                 width={500}
                 height={500}
+                alt="image of a person"
             />
         </div>
     );

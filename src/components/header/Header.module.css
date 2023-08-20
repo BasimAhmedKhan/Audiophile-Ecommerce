@@ -20,7 +20,7 @@
     cursor: pointer;
 }
 
-.nav li:hover{
+.nav a:hover, .nav ul>*:hover{
     color: var(--orange);
 }
 
