@@ -19,7 +19,7 @@ export default function Header({ footer }) {
         <header className={styles.header}>
             <nav className={`${styles.nav} margin`} style={{ borderBottom: footer ? 'none' : '1px solid rgb(61, 61, 61)' }}>
                 <ul>
-                    <li><Image className={styles.title} src={'./images/shared/desktop/logo.svg'} width={100} height={100} /></li>
+                    <li><Link className="white" href="/"><Image className={styles.title} src={'logo.svg'} width={100} height={100} alt='audiophile' /></Link></li>
                 </ul>
                 <ul className='center'>
                     <li><Link className="white" href="/">HOME</Link></li>

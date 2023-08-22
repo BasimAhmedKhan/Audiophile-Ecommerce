@@ -29,7 +29,7 @@ export default function Home() {
         <section className={`${styles.zx9SpeakerContainer} marginTB b-radius`}>
           <div className={`${styles.zx9Speaker} center width100 height100`}>
             <div className="center">
-              <Image className={styles.zx9} src="/images/home/desktop/image-speaker-zx9.png" width={500} height={500} alt="image of a speaker" />
+              <Image className={styles.zx9} src="/assets/home/desktop/image-speaker-zx9.png" width={500} height={500} alt="image of a speaker" />
             </div>
             <div className={`${styles.zx9Detail} ${styles.white} height100 childsMargin`}>
               <h1>ZX1<br />SPEAKER</h1>
@@ -44,7 +44,7 @@ export default function Home() {
         </section>
         <section className={`${styles.yx1Earphones} flex margin`}>
           <div>
-            <Image className="height100 b-radius" src="/images/home/desktop/image-earphones-yx1.jpg" width={540} height={588} alt="image of an earphones" />
+            <Image className="height100 b-radius" src="/assets/home/desktop/image-earphones-yx1.jpg" width={540} height={588} alt="image of an earphones" />
           </div>
           <div className={`${styles.yx1Detail} center b-radius childsMargin`}>
             <h2>YX1 EARPHONES</h2>
