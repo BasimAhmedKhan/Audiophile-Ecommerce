@@ -14,7 +14,7 @@ export default function BestGear() {
             <Image
                 style={{width: '50%'}}
                 className="height100 b-radius"
-                src="/images/shared/desktop/image-best-gear.jpg"
+                src="/assets/shared/desktop/image-best-gear.jpg"
                 width={500}
                 height={500}
                 alt="image of a person"

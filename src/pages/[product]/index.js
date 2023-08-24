@@ -3,7 +3,7 @@ import Product from "@/components/product/Product";
 import ProductCardContainer from "@/components/productCardContainer/ProductCardContainer";
 import { useRouter } from "next/router";
 
-export default function (props) {
+export default function Index(props) {
     const { prod } = props;
     const router = useRouter();
     const { product } = router.query;
@@ -14,9 +14,9 @@ export default function (props) {
             name={p.name}
             price={p.price}
             desc={p.description}
-            incl={p.include}
             reverse={i % 2 !== 0}
             src={p.image}
+            link={`/${product}/${p.slug}`}
         />
     })
     return (

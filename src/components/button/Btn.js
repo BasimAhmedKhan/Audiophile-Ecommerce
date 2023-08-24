@@ -1,8 +1,10 @@
 import { Button } from "antd";
 
-export default function Btn({ size, text, bg, color, ghost, brColor }) {
+export default function Btn({ size, text, bg, color, ghost, brColor, link }) {
     return (
-        <Button type='primary'
+        <Button 
+            href={link}
+            type='primary'
             ghost={ghost}
             style={{
                 background: `var(--${bg})`,

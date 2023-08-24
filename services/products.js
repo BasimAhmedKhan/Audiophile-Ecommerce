@@ -10,7 +10,10 @@ export function getProducts(){
 
 export function getByCat(cat){
     const data = getProducts();
-    return data.filter(prod => {
-        return prod.category === cat;
-    });
+    return data.filter(prod => prod.category === cat);
+}
+
+export function getBySlug(slug){
+    const data = getProducts();
+    return data.find(prod => prod.slug === slug);
 }
