@@ -60,21 +60,21 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
     return {
         paths: [
-            {
-                params: {
-                    product: 'headphones',
-                },
-            },
-            {
-                params: {
-                    product: 'earphones',
-                },
-            },
-            {
-                params: {
-                    product: 'speakers',
-                },
-            },
+            // {
+            //     params: {
+            //         product: 'headphones',
+            //     },
+            // },
+            // {
+            //     params: {
+            //         product: 'earphones',
+            //     },
+            // },
+            // {
+            //     params: {
+            //         product: 'speakers',
+            //     },
+            // },
         ],
         fallback: false, // false or "blocking"
     };
