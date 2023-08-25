@@ -12,7 +12,7 @@ export default function Product({ name, price, desc, cart, reverse, src, link })
     };
     return (
         <>
-            <div className="marginTB flex" style={{ justifyContent: 'space-between', flexDirection: `${reverse ? 'row-reverse' : ''}` }}>
+            <div className="marginTB flex" style={{ justifyContent: "space-between", flexDirection: `${reverse ? "row-reverse" : ''}` }}>
                 <div className="productCard">
                     <picture>
                         <source media="(min-width: 992px)" srcSet={src.desktop} />
@@ -25,7 +25,7 @@ export default function Product({ name, price, desc, cart, reverse, src, link })
                     <div style={{ fontSize: '1.5rem', width: '15rem' }}>
                         <h2 style={{ textTransform: 'uppercase' }} >{name}</h2>
                     </div>
-                    <p style={{ color: 'rgba(0,0,0,0.5)' }}>
+                    <p style={{ color: 'var(--greyOnWhite)' }}>
                         {desc}
                     </p>
                     <h3 style={{ display: `${cart ? "" : "none"}` }}><span>$ </span>{price}</h3>

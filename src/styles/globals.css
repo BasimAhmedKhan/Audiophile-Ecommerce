@@ -2,6 +2,7 @@
 
 :root{
     --grey: rgba(255,255,255,0.5);
+    --greyOnWhite: rgba(0,0,0,0.5);
     --orange: hsl(22, 64%, 57%);
     --black: #191919;
 }
@@ -39,6 +40,7 @@ p{
     font-size: 1rem;
     line-height: 1.5;
     color: var(--grey);
+    white-space: break-spaces;
 }
 
 a{
