@@ -20,7 +20,7 @@ export default function Home() {
             <strong className='newProduct'>NEW PRODUCT</strong>
             <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>
             <p style={{ color: 'var(--grey)' }}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-            <Btn bg={"orange"} size={'large'} text={'SEE PRODUCT'} />
+            <Btn link={"/headphones/xx99-mark-two-headphones"} bg={"orange"} size={'large'} text={'SEE PRODUCT'} />
           </div>
         </section>
         <section className={`${styles.productShow}`}>
@@ -34,13 +34,13 @@ export default function Home() {
             <div className={`${styles.zx9Detail} ${styles.white} height100 childsMargin`}>
               <h1>ZX1<br />SPEAKER</h1>
               <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-              <Btn bg={"black"} color={"white"} size={'large'} text={'SEE PRODUCT'} />
+              <Btn link={"/speakers/zx9-speaker"} bg={"black"} color={"white"} size={'large'} text={'SEE PRODUCT'} />
             </div>
           </div>
         </section>
         <section className={`${styles.zx7Speaker} center marginTB b-radius childsMargin`}>
           <h2>ZX7 SPEAKER</h2>
-          <Btn color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
+          <Btn link={"/speakers/zx7-speaker"} color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
         </section>
         <section className={`${styles.yx1Earphones} flex margin`}>
           <div>
@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div className={`${styles.yx1Detail} center b-radius childsMargin`}>
             <h2>YX1 EARPHONES</h2>
-            <Btn color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
+            <Btn link={"/earphones/yx1-earphones"} color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
           </div>
         </section>
         <section>

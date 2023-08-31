@@ -2,11 +2,20 @@ import BestGear from "@/components/bestGear/BestGear";
 import Product from "@/components/product/Product";
 import ProductCardContainer from "@/components/productCardContainer/ProductCardContainer";
 import { useRouter } from "next/router";
+import { Skeleton } from 'antd';
 
 export default function Index(props) {
     const { prod } = props;
     const router = useRouter();
     const { product } = router.query;
+    // if (!prod) {
+    //     return (
+    //         <div className="flex marginTB" style={{ justifyContent: "space-between", height: '35rem', width: '35rem'}}>
+    //             <Skeleton.Image active={true} className="height100 width100"/>
+    //             <Skeleton className="height100 width100" />
+    //         </div>
+    //     );
+    // }
     const productList = prod.map((p, i) => {
         return <Product
             key={p.id}

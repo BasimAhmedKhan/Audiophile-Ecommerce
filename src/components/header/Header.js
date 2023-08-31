@@ -5,11 +5,10 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Link from 'next/link';
 
 export default function Header({ footer }) {
-    const text = <span>Items</span>;
     const content = (
-        <div className=''>
-            <h2>Your Cart is Empty mooherfucker</h2>
-            <AiOutlineShoppingCart className={styles.cart} size={50} />
+        <div className='center childsMargin' style={{height: "auto", width: "20rem", flexDirection: 'column'}}>
+            <strong style={{color: 'var(--greyOnWhite)'}}>YOUR CART IS EMPTY</strong>
+            <AiOutlineShoppingCart className={styles.cart} size={100} />
         </div>
     );
     return (
@@ -28,7 +27,7 @@ export default function Header({ footer }) {
                 </ul>
                 <ul style={{ display: footer ? 'none' : 'block' }}>
                     <li>
-                        <Popover placement="bottomRight" title={text} content={content} trigger="click">
+                        <Popover placement="bottomRight" content={content} trigger="click">
                             <AiOutlineShoppingCart className={styles.cart} size={28} />
                         </Popover>
                     </li>
