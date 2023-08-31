@@ -74,15 +74,14 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             prod: data,
-        },
-        notFound: true
+        }
     };
 }
 
-// export async function getStaticPaths() {
-//     return {
-//         paths: [
-//         ],
-//         fallback: "blocking", // false or "blocking"
-//     };
-// }
+export async function getStaticPaths() {
+    return {
+        paths: [
+        ],
+        fallback: "blocking", // false or "blocking"
+    };
+}
