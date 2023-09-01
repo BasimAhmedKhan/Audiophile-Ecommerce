@@ -23,18 +23,18 @@ export default function Slug(props) {
                     src={prod.image}
                     link={"#"}
                 />
-                <div className="flex marginTB" style={{ justifyContent: 'space-between' }}>
-                    <div className="childsMargin" style={{ width: '60%' }}>
+                <div className="flex flex-column marginTB" style={{ justifyContent: 'space-between' }}>
+                    <div className="childsMargin flex-column resWidth" style={{ width: '60%' }}>
                         <h2>FEATURES</h2>
                         <p style={{ color: 'var(--greyOnWhite)' }}>{prod.features}</p>
                     </div>
-                    <div className="childsMargin" style={{ width: '30%' }}>
+                    <div className="childsMargin resWidth" style={{ width: '30%' }}>
                         <h2>IN THE BOX</h2>
                         <ul className="childsMargin">{include}</ul>
                     </div>
                 </div>
-                <div className="gallery flex marginTB childWidth" style={{height: '37rem', justifyContent: "space-between"}}>
-                    <div className="childWidth height100 flex" style={{flexDirection: 'column', justifyContent: "space-between",width: '40%'}}>
+                <div className="childsMargin gallery flex flex-column marginTB childWidth resHeight" style={{height: '37rem', justifyContent: "space-between"}}>
+                    <div className="childsMargin childWidth height100 flex flex-column resWidth" style={{flexDirection: 'column', justifyContent: "space-between",width: '40%'}}>
                         <div className="width100" style={{height: '49%'}}>
                             <picture>
                                 <source media="(min-width: 992px)" srcSet={prod.gallery.first.desktop} />
@@ -50,7 +50,7 @@ export default function Slug(props) {
                             </picture>
                         </div>
                     </div>
-                    <div className="height100" style={{width: '59%'}}>
+                    <div className="height100 resWidth" style={{width: '59%'}}>
                         <picture>
                             <source media="(min-width: 992px)" srcSet={prod.gallery.third.desktop} />
                             <source media="(min-width: 480px)" srcSet={prod.gallery.third.tablet} />

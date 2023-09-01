@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <main>
         <section className={`${styles.homeContainer}`}>
-          <div className={`${styles.home} center childsMargin margin`}>
+          <div className={`${styles.home} center childsMargin margin flex-column resCenter resWidth margin0`}>
             <strong className='newProduct'>NEW PRODUCT</strong>
             <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>
             <p style={{ color: 'var(--grey)' }}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
@@ -26,13 +26,21 @@ export default function Home() {
         <section className={`${styles.productShow}`}>
           <ProductCardContainer />
         </section>
-        <section className={`${styles.zx9SpeakerContainer} marginTB b-radius`}>
-          <div className={`${styles.zx9Speaker} center width100 height100`}>
-            <div className="center">
-              <Image className={styles.zx9} src="/assets/home/desktop/image-speaker-zx9.png" width={500} height={500} alt="image of a speaker" />
-            </div>
-            <div className={`${styles.zx9Detail} ${styles.white} height100 childsMargin`}>
-              <h1>ZX1<br />SPEAKER</h1>
+        <section className={`${styles.zx9SpeakerContainer} marginTB b-radius resCenter`}>
+          <div className={`${styles.zx9Speaker} center width100 height100 resCenter flex-column`}>
+            <picture className="center">
+              <source media="(min-width: 992px)" srcSet="/assets/home/desktop/image-speaker-zx9.png" />
+              <source media="(min-width: 480px)" srcSet="/assets/home/tablet/image-speaker-zx9.png" />
+              <Image
+                style={{ width: '28rem', height: '31rem' }}
+                className="b-radius x9" src="/assets/home/mobile/image-speaker-zx9.png"
+                width={500}
+                height={500}
+                alt="image of speaker"
+              />
+            </picture>
+            <div className={`${styles.zx9Detail} ${styles.white} height100 childsMargin flex-column resWidth resCenter`}>
+              <h1>ZX9<br />SPEAKER</h1>
               <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
               <Btn link={"/speakers/zx9-speaker"} bg={"black"} color={"white"} size={'large'} text={'SEE PRODUCT'} />
             </div>
@@ -42,11 +50,19 @@ export default function Home() {
           <h2>ZX7 SPEAKER</h2>
           <Btn link={"/speakers/zx7-speaker"} color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
         </section>
-        <section className={`${styles.yx1Earphones} flex margin`}>
-          <div>
-            <Image className="height100 b-radius" src="/assets/home/desktop/image-earphones-yx1.jpg" width={540} height={588} alt="image of an earphones" />
-          </div>
-          <div className={`${styles.yx1Detail} center b-radius childsMargin`}>
+        <section className={`${styles.yx1Earphones} flex margin flex-column childsMargin`}>
+          <picture className="resWidth">
+            <source media="(min-width: 992px)" srcSet="/assets/home/desktop/image-earphones-yx1.jpg" />
+            <source media="(min-width: 480px)" srcSet="/assets/home/tablet/image-earphones-yx1.jpg" />
+            <Image
+              style={{ width: 'auto', height: 'auto' }}
+              className="b-radius resWidth" src="/assets/home/mobile/image-earphones-yx1.jpg"
+              width={540}
+              height={588}
+              alt="image of speaker"
+            />
+          </picture>
+          <div style={{height: '20rem'}} className={`${styles.yx1Detail} center b-radius childsMargin resWidth`}>
             <h2>YX1 EARPHONES</h2>
             <Btn link={"/earphones/yx1-earphones"} color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
           </div>

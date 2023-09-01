@@ -3,12 +3,14 @@ import { Button } from "antd";
 export default function Btn({ size, text, bg, color, ghost, brColor, link }) {
     return (
         <Button 
+            className="center"
             href={link}
             type='primary'
             ghost={ghost}
             style={{
                 background: `var(--${bg})`,
                 borderRadius: '0', 
+                height: "2.5rem",
                 width: '10rem', 
                 color: color,
                 fontSize: '0.8rem', 

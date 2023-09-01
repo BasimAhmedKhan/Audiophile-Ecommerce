@@ -1,11 +1,13 @@
 .productCard {
-    height: 10rem;
-    width: 21rem;
+    height: 11rem;
+    width: 22rem;
     background-color: #f1f1f1;
     border-radius: 0.8rem;
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .productCard:hover .show{
@@ -13,8 +15,8 @@
 }
 
 .productImg {
-    height: 8rem;
-    width: 9rem;
+    height: 10rem;
+    width: 11rem;
     position: absolute;
     top: -3rem;
 }
