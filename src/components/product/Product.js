@@ -17,7 +17,7 @@ export default function Product({ name, price, desc, cart, reverse, src, link })
                     <picture>
                         <source media="(min-width: 992px)" srcSet={src.desktop} />
                         <source media="(min-width: 480px)" srcSet={src.tablet} />
-                        <Image className="b-radius resWidth" style={{height: "35em", width: "35em"}} src={src.mobile} width={550} height={550} alt="image of speaker" />
+                        <Image className="b-radius resWidth prodImage" style={{height: "35rem", width: "35rem"}} src={src.mobile} width={500} height={550} alt="image of speaker" />
                     </picture>
                 </div>
                 <div className="productDetail childsMargin flex resWidth resCenter" style={{ flexDirection: 'column', justifyContent: 'center', width: '40%' }}>

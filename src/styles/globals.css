@@ -88,6 +88,10 @@ a{
     filter: opacity(0.5);
 }
 
+.resDisplay{
+  display: none;
+}
+
 @media only screen and (max-width: 900px){
     .resCenter{
         display: flex !important;
@@ -111,9 +115,6 @@ a{
     .display{
         display: block;
     }
-    picture{
-        font-size: 0.7rem;
-    }
     li{
         margin: 1rem 2rem;
     }
@@ -129,6 +130,9 @@ a{
     }
     .resHeight{
         height: auto !important;
+    }
+    .prodImage{
+      height: 30rem !important;
     }
 }
 
