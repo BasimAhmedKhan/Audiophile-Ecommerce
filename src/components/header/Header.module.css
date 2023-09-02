@@ -1,9 +1,10 @@
 .header{
     background-color: var(--black);
+    position: relative;
+    z-index: 1001;
 }
 
 .nav {
-    height: 5.5rem;
     background-color: var(--black);
     display: flex;
     justify-content: space-between;

@@ -106,13 +106,13 @@ a{
         width: 100% !important;
     }
     .displayNone{
-        display: none;
+        display: none !important;
     }
     .display{
         display: block;
     }
     picture{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
     li{
         margin: 1rem 2rem;
