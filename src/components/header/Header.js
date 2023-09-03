@@ -25,10 +25,11 @@ export default function Header({ footer }) {
             <nav className={`${styles.nav} margin ${footer ? 'flex-column' : ''} ${footer ? 'footer' : ''}`} style={{ borderBottom: footer ? 'none' : '1px solid rgb(61, 61, 61)', height: footer ? "8rem" : "5.5rem" }}>
                 <ul className="resDisplay display">
                     <li onClick={check} style={{ cursor: 'pointer', display: footer ? 'none' : 'block' }}>
-                        <svg style={{display: open ? 'none' : 'block'}} width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" /></g></svg>
-                        <svg style={{display: open ? 'block' : 'none'}} width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z"/><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z"/></g></svg>
+                        <svg style={{ display: open ? 'none' : 'block' }} width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" /></g></svg>
+                        <svg style={{ display: open ? 'block' : 'none' }} width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z" /><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z" /></g></svg>
                     </li>
                     <Drawer
+                        onClick={onClose}
                         placement={"top"}
                         closable={false}
                         onClose={onClose}
@@ -39,7 +40,7 @@ export default function Header({ footer }) {
                             height: '80vh'
                         }}
                     >
-                        <ProductCardContainer onClick={onClose} />
+                        <ProductCardContainer />
                     </Drawer>
                 </ul>
                 <ul>
