@@ -2,10 +2,24 @@ import Image from "next/image";
 import BestGear from "@/components/bestGear/BestGear";
 import Product from "@/components/product/Product";
 import ProductCardContainer from "@/components/productCardContainer/ProductCardContainer";
+import { Skeleton } from 'antd';
 
 export default function Slug(props) {
 
     const { prod } = props;
+    if (!prod) {
+        return (
+            <div className="flex flex-column marginTB center" style={{ justifyContent: "space-between", height: '35rem', width: 'auto' }}>
+                <div className="height100" style={{width: '50%'}}>
+                    <Skeleton.Image active={true} className="height100 width100" />
+                </div>
+                <div className="flex center childsMargin height100 resWidth resCenter" style={{ flexDirection: 'column', width: '45%' }}>
+                    <Skeleton active={true} className="" />
+                    <Skeleton.Button active={true} size={'default'} shape={'square'} block={false} />
+                </div>
+            </div>
+        );
+    }
     const include = prod.includes.map((e, i) => {
         return (
             <li key={i} style={{ color: 'var(--greyOnWhite)' }}><strong style={{ color: 'var(--orange)' }}>{e.quantity}x</strong>~{e.item}</li>
@@ -82,6 +96,6 @@ export async function getStaticPaths() {
     return {
         paths: [
         ],
-        fallback: "blocking", // false or "blocking"
+        fallback: true, // false or "blocking"
     };
 }
