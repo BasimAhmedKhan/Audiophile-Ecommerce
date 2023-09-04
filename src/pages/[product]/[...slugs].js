@@ -2,22 +2,14 @@ import Image from "next/image";
 import BestGear from "@/components/bestGear/BestGear";
 import Product from "@/components/product/Product";
 import ProductCardContainer from "@/components/productCardContainer/ProductCardContainer";
-import { Skeleton } from 'antd';
+import SkeletonLoading from "@/components/skeletonLoading/Skeleton";
 
 export default function Slug(props) {
 
     const { prod } = props;
     if (!prod) {
         return (
-            <div className="flex flex-column marginTB center" style={{ justifyContent: "space-between", height: '35rem', width: 'auto' }}>
-                <div className="height100" style={{width: '50%'}}>
-                    <Skeleton.Image active={true} className="height100 width100" />
-                </div>
-                <div className="flex center childsMargin height100 resWidth resCenter" style={{ flexDirection: 'column', width: '45%' }}>
-                    <Skeleton active={true} className="" />
-                    <Skeleton.Button active={true} size={'default'} shape={'square'} block={false} />
-                </div>
-            </div>
+            <SkeletonLoading />
         );
     }
     const include = prod.includes.map((e, i) => {
@@ -35,7 +27,8 @@ export default function Slug(props) {
                     price={prod.price}
                     desc={prod.description}
                     src={prod.image}
-                    link={"#"}
+                    // link={"#"}
+                    click={true}
                 />
                 <div className="flex flex-column marginTB" style={{ justifyContent: 'space-between' }}>
                     <div className="childsMargin flex-column resWidth" style={{ width: '60%' }}>

@@ -4,12 +4,6 @@ import { AiFillFacebook, AiOutlineTwitter, AiOutlineInstagram } from 'react-icon
 import Link from 'next/link';
 
 export default function Footer() {
-    // const width = () => {
-    //     if(window.innerWidth <= 900){
-    //         return "auto";
-    //     }
-    //     return "23rem";
-    // };
     return (
         <footer className={`${styles.footer} flex flex-column`}>
             <Header footer={true} />

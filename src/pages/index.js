@@ -46,23 +46,25 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={`${styles.zx7Speaker} center marginTB b-radius childsMargin`}>
-          <h2>ZX7 SPEAKER</h2>
-          <Btn link={"/speakers/zx7-speaker"} color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
+        <section className="marginTB">
+          <div className={`${styles.zx7Speaker} center b-radius childsMargin width100`}>
+            <h2>ZX7 SPEAKER</h2>
+            <Btn link={"/speakers/zx7-speaker"} color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
+          </div>
         </section>
         <section className={`${styles.yx1Earphones} flex margin flex-column childsMargin`}>
           <picture className="resWidth">
             <source media="(min-width: 992px)" srcSet="/assets/home/desktop/image-earphones-yx1.jpg" />
             <source media="(min-width: 480px)" srcSet="/assets/home/tablet/image-earphones-yx1.jpg" />
             <Image
-              style={{ width: 'auto', height: 'auto' }}
-              className="b-radius resWidth" src="/assets/home/mobile/image-earphones-yx1.jpg"
+              style={{ height: 'auto' }}
+              className="b-radius resWidth  width100" src="/assets/home/mobile/image-earphones-yx1.jpg"
               width={540}
               height={588}
               alt="image of speaker"
             />
           </picture>
-          <div style={{height: '20rem'}} className={`${styles.yx1Detail} center b-radius childsMargin resWidth`}>
+          <div style={{ height: 'auto' }} className={`${styles.yx1Detail} center b-radius childsMargin resWidth yx1Height`}>
             <h2>YX1 EARPHONES</h2>
             <Btn link={"/earphones/yx1-earphones"} color={"black"} brColor={"black"} size={'large'} text={'SEE PRODUCT'} ghost={true} />
           </div>

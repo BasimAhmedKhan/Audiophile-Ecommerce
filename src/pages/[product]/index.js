@@ -1,8 +1,8 @@
 import BestGear from "@/components/bestGear/BestGear";
 import Product from "@/components/product/Product";
 import ProductCardContainer from "@/components/productCardContainer/ProductCardContainer";
+import SkeletonLoading from "@/components/skeletonLoading/Skeleton";
 import { useRouter } from "next/router";
-import { Skeleton } from 'antd';
 
 export default function Index(props) {
     const { prod } = props;
@@ -10,15 +10,7 @@ export default function Index(props) {
     const { product } = router.query;
     if (!prod) {
         return (
-            <div className="flex flex-column marginTB center" style={{ justifyContent: "space-between", height: '35rem', width: 'auto' }}>
-                <div className="height100" style={{width: '50%'}}>
-                    <Skeleton.Image active={true} className="height100 width100" />
-                </div>
-                <div className="flex center childsMargin height100 resWidth resCenter" style={{ flexDirection: 'column', width: '45%' }}>
-                    <Skeleton active={true} className="" />
-                    <Skeleton.Button active={true} size={'default'} shape={'square'} block={false} />
-                </div>
-            </div>
+            <SkeletonLoading />
         );
     }
     const productList = prod.map((p, i) => {

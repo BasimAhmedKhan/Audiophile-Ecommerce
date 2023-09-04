@@ -76,7 +76,7 @@
 
 @media only screen and (min-width: 992px) {
     .zx7Speaker {
-        background: url("./../../public/assets/home/desktop/image-speaker-zx7.jpg") no-repeat;
+        background: url("./../../public/assets/home/desktop/image-speaker-zx7.jpg") center/cover no-repeat;
     }
     .homeContainer {
         background: url("./../../public/assets/home/desktop/image-hero.jpg") center/contain no-repeat;
