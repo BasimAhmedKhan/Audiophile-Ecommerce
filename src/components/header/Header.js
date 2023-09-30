@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styles from './Header.module.css';
 import { Popover, Drawer } from 'antd';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
@@ -21,17 +21,14 @@ export default function Header({ footer }) {
     const check = () => {
         setOpen(!open);
     };
-    const removeAllItems = () => {
-        localStorage.removeItem("orders");
-    };
     const Cartcontent = () => {
         let total = 0;
         const orders = JSON.parse(localStorage.getItem("orders"));
         if (orders) {
-            const items = orders.map((e) => {
+            const items = orders.map((e, i) => {
                 total += e.price;
                 return (
-                    <div className="center width100" style={{ height: '3rem' }}>
+                    <div key={e.price} className="center width100" style={{ height: '3rem' }}>
                         <div className="center">
                             <Image className='b-radius' src={`/assets/cart/${e.image}.jpg`} width={'50'} height={'50'} alt={`${e.name}`} />
                             <div style={{ marginLeft: '1rem' }}>
@@ -51,7 +48,7 @@ export default function Header({ footer }) {
                 <div className={`${styles.cart} center`} style={{ height: "auto", width: "20rem", flexDirection: 'column' }}>
                     <div className="flex center width100">
                         <h3>CART</h3>
-                        <h3 style={{ color: 'var(--greyOnWhite)', cursor: 'pointer' }} onClick={removeAllItems}>Remove All</h3>
+                        <h3 style={{ color: 'var(--greyOnWhite)', cursor: 'pointer' }} onClick={() => {localStorage.removeItem("orders")}}>Remove All</h3>
                     </div>
                     {items}
                     <div className="flex center width100">
