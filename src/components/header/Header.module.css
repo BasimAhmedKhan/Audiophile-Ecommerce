@@ -30,3 +30,9 @@
     width: 9rem;
     margin-right: 0rem;
 }
+
+.cart>*{
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    margin: 1rem;
+}

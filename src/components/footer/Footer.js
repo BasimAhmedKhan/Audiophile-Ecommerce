@@ -13,9 +13,9 @@ export default function Footer() {
                     <p>Copyright 2023. All Rights Reserved</p>
                 </div>
                 <div className={`${styles.social} center resCenter`}>
-                    <Link href="#"><AiFillFacebook size={32} /></Link>
+                    <Link href="https://www.facebook.com/profile.php?id=100009322472394"><AiFillFacebook size={32} target="_blank"/></Link>
                     <Link href="#"><AiOutlineTwitter size={32} /></Link>
-                    <Link href="#"><AiOutlineInstagram size={32} /></Link>
+                    <Link href="https://www.instagram.com/basim_khann/"><AiOutlineInstagram size={32} /></Link>
                 </div>
             </div>
         </footer>

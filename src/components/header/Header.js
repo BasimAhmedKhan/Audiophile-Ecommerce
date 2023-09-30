@@ -1,33 +1,82 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Header.module.css';
 import { Popover, Drawer } from 'antd';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Link from 'next/link';
 import ProductCardContainer from '../productCardContainer/ProductCardContainer';
+import Image from 'next/image';
 
 export default function Header({ footer }) {
     const [open, setOpen] = useState(false);
+    // const [cartItems, setCartItems] = useState([]);
+
+    // useEffect(() => {
+    //     const orders = JSON.parse(localStorage.getItem("orders")) || [];
+    //     setCartItems(orders);
+    // }, [cartItems]);
+
     const onClose = () => {
         setOpen(false);
     };
     const check = () => {
-        if (open) { setOpen(false); }
-        else { setOpen(true); }
+        setOpen(!open);
     };
-    const content = (
-        <div className='center childsMargin' style={{ height: "auto", width: "20rem", flexDirection: 'column' }}>
-            <strong style={{ color: 'var(--greyOnWhite)' }}>YOUR CART IS EMPTY</strong>
-            <AiOutlineShoppingCart className={styles.cart} size={100} />
-        </div>
-    );
+    const removeAllItems = () => {
+        localStorage.removeItem("orders");
+    };
+    const Cartcontent = () => {
+        let total = 0;
+        const orders = JSON.parse(localStorage.getItem("orders"));
+        if (orders) {
+            const items = orders.map((e) => {
+                total += e.price;
+                return (
+                    <div className="center width100" style={{ height: '3rem' }}>
+                        <div className="center">
+                            <Image className='b-radius' src={`/assets/cart/${e.image}.jpg`} width={'50'} height={'50'} alt={`${e.name}`} />
+                            <div style={{ marginLeft: '1rem' }}>
+                                <h3>{(e.name).substring(0, 3)}</h3>
+                                <strong style={{ color: 'var(--greyOnWhite)' }}>{"$ " + e.price}</strong>
+                            </div>
+                        </div>
+                        <div className="flex" style={{ marginRight: '1rem' }}>
+                            <div className="counter center">-</div>
+                            <span className="counter center">{e.counter}</span>
+                            <div className="counter center">+</div>
+                        </div>
+                    </div>
+                );
+            });
+            return (
+                <div className={`${styles.cart} center`} style={{ height: "auto", width: "20rem", flexDirection: 'column' }}>
+                    <div className="flex center width100">
+                        <h3>CART</h3>
+                        <h3 style={{ color: 'var(--greyOnWhite)', cursor: 'pointer' }} onClick={removeAllItems}>Remove All</h3>
+                    </div>
+                    {items}
+                    <div className="flex center width100">
+                        <h3 style={{ color: 'var(--greyOnWhite)' }}>TOTAL</h3>
+                        <h3>{"$ " + total}</h3>
+                    </div>
+                </div>
+            );
+        }
+        return (
+            <div className='center childsMargin' style={{ height: "auto", width: "20rem", flexDirection: 'column' }}>
+                <strong style={{ color: 'var(--greyOnWhite)' }}>YOUR CART IS EMPTY</strong>
+                <AiOutlineShoppingCart className={styles.cart} size={100} />
+            </div>
+        );
+    };
     return (
         <header className={styles.header}>
             <nav className={`${styles.nav} margin ${footer ? 'flex-column' : ''} ${footer ? 'footer' : ''}`} style={{ borderBottom: footer ? 'none' : '1px solid rgb(61, 61, 61)', height: footer ? "8rem" : "5.5rem" }}>
                 <ul className="resDisplay display">
-                    <li onClick={check} style={{ cursor: 'pointer', display: footer ? 'none' : 'block' }}>
-                        <svg style={{ display: open ? 'none' : 'block' }} width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" /></g></svg>
-                        <svg style={{ display: open ? 'block' : 'none' }} width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z" /><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z" /></g></svg>
-                    </li>
+                    {footer ? null :
+                        <li onClick={check} style={{ cursor: 'pointer' }}>
+                            <svg style={{ display: open ? 'none' : 'block' }} width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" /></g></svg>
+                            <svg style={{ display: open ? 'block' : 'none' }} width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fillRule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z" /><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z" /></g></svg>
+                        </li>}
                     <Drawer
                         onClick={onClose}
                         placement={"top"}
@@ -54,13 +103,14 @@ export default function Header({ footer }) {
                     <li><Link className="white" href="/speakers">SPEAKERS</Link></li>
                     <li><Link className="white" href="/earphones">EARPHONES</Link></li>
                 </ul>
-                <ul style={{ display: footer ? 'none' : 'block' }}>
-                    <li>
-                        <Popover placement="bottomRight" content={content} trigger="click">
-                            <AiOutlineShoppingCart className={styles.cart} size={28} />
-                        </Popover>
-                    </li>
-                </ul>
+                {footer ? null :
+                    <ul>
+                        <li>
+                            <Popover placement="bottomRight" content={Cartcontent} trigger="click">
+                                <AiOutlineShoppingCart className={styles.cart} size={28} />
+                            </Popover>
+                        </li>
+                    </ul>}
             </nav>
         </header>
     );

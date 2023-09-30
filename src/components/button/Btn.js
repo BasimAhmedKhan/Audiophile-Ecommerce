@@ -7,7 +7,7 @@ export default function Btn({ size, text, bg, color, ghost, brColor, link, click
             type: 'success',
             content: 'Item added to cart',
         });
-        console.log("success");
+        
     };
     return (
         <>
