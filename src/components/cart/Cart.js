@@ -2,10 +2,11 @@ import styles from '../header/Header.module.css';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
+import Btn from '../button/Btn';
 
 export default function Cart() {
 
-    const { increaseQuantity, decreaseQuantity, removeItems, cart } = useCart();
+    const { increaseQuantity, decreaseQuantity, removeItems, getTotal, cart } = useCart();
     if (cart.length > 0) {
         const items = cart.map((e) => {
             return (
@@ -37,8 +38,9 @@ export default function Cart() {
                     {items}
                     <div className="flex center width100">
                         <h3 style={{ color: 'var(--greyOnWhite)' }}>TOTAL</h3>
-                        <h3>{"$ " + 0}</h3>
+                        <h3>{"$ " + (cart.reduce((p, e) => { return p + (e.price * e.counter) }, 0))}</h3>
                     </div>
+                    <Btn link={"/checkout"} bg={"orange"} size={'large'} text={'CHECK OUT'}  />
                 </div>
             </>
         );

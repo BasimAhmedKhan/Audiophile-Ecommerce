@@ -1,6 +1,5 @@
 import useLocalStorage from "@/utils/useLocalStorage";
 import { createContext, useContext } from "react";
-import products from "../../data/products.json"
 
 const CartContext = createContext({});
 
@@ -51,6 +50,10 @@ export function CartProvider({ children }) {
         return cart.find((e) => e.id === id)?.counter || 1;
     }
 
+    function getTotal(){
+        return cart.reduce((total, e) => total.price + e.price)
+    }
+
     return (
         <CartContext.Provider value={{
             addProduct,
@@ -58,7 +61,8 @@ export function CartProvider({ children }) {
             decreaseQuantity,
             removeItems,
             getItemQuantity,
-            cart }}>
+            cart,
+            getTotal }}>
             {children}
         </CartContext.Provider>
     );

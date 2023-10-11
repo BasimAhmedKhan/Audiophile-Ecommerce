@@ -7,18 +7,20 @@ export default function Btn({ size, text, bg, color, ghost, brColor, link, click
             type: 'success',
             content: 'Item added to cart',
         });
-        
+
     };
     return (
         <>
             {contextHolder}
             <Button
-                className="center"
                 href={link}
                 type='primary'
                 ghost={ghost}
-                onClick={click?success:null}
+                onClick={click ? success : null}
                 style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                     background: `var(--${bg})`,
                     borderRadius: '0',
                     height: "2.5rem",
@@ -27,10 +29,11 @@ export default function Btn({ size, text, bg, color, ghost, brColor, link, click
                     fontSize: '0.8rem',
                     fontWeight: '700',
                     letterSpacing: '2px',
-                    borderColor: brColor
+                    borderColor: brColor,
                 }}
-                size={size}>{text}
-            </Button>
+                size={size}>
+                {text}
+            </Button >
         </>
     );
 }
