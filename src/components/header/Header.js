@@ -4,66 +4,15 @@ import { Popover, Drawer } from 'antd';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Link from 'next/link';
 import ProductCardContainer from '../productCardContainer/ProductCardContainer';
-import Image from 'next/image';
+import Cart from '../cart/Cart';
 
 export default function Header({ footer }) {
     const [open, setOpen] = useState(false);
-    // const [cartItems, setCartItems] = useState([]);
-
-    // useEffect(() => {
-    //     const orders = JSON.parse(localStorage.getItem("orders")) || [];
-    //     setCartItems(orders);
-    // }, [cartItems]);
-
     const onClose = () => {
         setOpen(false);
     };
     const check = () => {
         setOpen(!open);
-    };
-    const Cartcontent = () => {
-        let total = 0;
-        const orders = JSON.parse(localStorage.getItem("orders"));
-        if (orders) {
-            const items = orders.map((e, i) => {
-                total += e.price;
-                return (
-                    <div key={e.price} className="center width100" style={{ height: '3rem' }}>
-                        <div className="center">
-                            <Image className='b-radius' src={`/assets/cart/${e.image}.jpg`} width={'50'} height={'50'} alt={`${e.name}`} />
-                            <div style={{ marginLeft: '1rem' }}>
-                                <h3>{(e.name).substring(0, 3)}</h3>
-                                <strong style={{ color: 'var(--greyOnWhite)' }}>{"$ " + e.price}</strong>
-                            </div>
-                        </div>
-                        <div className="flex" style={{ marginRight: '1rem' }}>
-                            <div className="counter center">-</div>
-                            <span className="counter center">{e.counter}</span>
-                            <div className="counter center">+</div>
-                        </div>
-                    </div>
-                );
-            });
-            return (
-                <div className={`${styles.cart} center`} style={{ height: "auto", width: "20rem", flexDirection: 'column' }}>
-                    <div className="flex center width100">
-                        <h3>CART</h3>
-                        <h3 style={{ color: 'var(--greyOnWhite)', cursor: 'pointer' }} onClick={() => {localStorage.removeItem("orders")}}>Remove All</h3>
-                    </div>
-                    {items}
-                    <div className="flex center width100">
-                        <h3 style={{ color: 'var(--greyOnWhite)' }}>TOTAL</h3>
-                        <h3>{"$ " + total}</h3>
-                    </div>
-                </div>
-            );
-        }
-        return (
-            <div className='center childsMargin' style={{ height: "auto", width: "20rem", flexDirection: 'column' }}>
-                <strong style={{ color: 'var(--greyOnWhite)' }}>YOUR CART IS EMPTY</strong>
-                <AiOutlineShoppingCart className={styles.cart} size={100} />
-            </div>
-        );
     };
     return (
         <header className={styles.header}>
@@ -103,7 +52,7 @@ export default function Header({ footer }) {
                 {footer ? null :
                     <ul>
                         <li>
-                            <Popover placement="bottomRight" content={Cartcontent} trigger="click">
+                            <Popover placement="bottomRight" content={()=> <Cart />} trigger="click">
                                 <AiOutlineShoppingCart className={styles.cart} size={28} />
                             </Popover>
                         </li>
