@@ -6,7 +6,7 @@ import Btn from '../button/Btn';
 
 export default function Cart() {
 
-    const { increaseQuantity, decreaseQuantity, removeItems, getTotal, cart } = useCart();
+    const { increaseQuantity, decreaseQuantity, removeItems, cart } = useCart();
     if (cart.length > 0) {
         const items = cart.map((e) => {
             return (

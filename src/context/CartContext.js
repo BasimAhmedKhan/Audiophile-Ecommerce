@@ -17,10 +17,10 @@ export function CartProvider({ children }) {
             name: name,
             image: slug,
             price: price,
-            counter: counter,
+            counter: counter+1,
         }
         const existingProductIndex = cart.findIndex((item) => item.id === id);
-        if (existingProductIndex !== -1) productDetails.counter = counter;
+        if (existingProductIndex !== -1) increaseQuantity(id);
         else {
             const newCart = [...cart, productDetails];
             setCart(newCart);
@@ -47,13 +47,13 @@ export function CartProvider({ children }) {
     }
 
     function getItemQuantity(id) {
-        return cart.find((e) => e.id === id)?.counter || 1;
+        return cart.find((e) => e.id === id)?.counter || 0;
     }
 
     function getTotal(){
         return cart.reduce((total, e) => total.price + e.price)
     }
-
+    
     return (
         <CartContext.Provider value={{
             addProduct,

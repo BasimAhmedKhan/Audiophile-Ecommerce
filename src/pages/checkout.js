@@ -1,7 +1,7 @@
 export default function Checkout(){
     return(
         <>
-            <h1>Hello Jee</h1>
+            <h1>Checkout</h1>
         </>
     );
 }

@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './Header.module.css';
 import { Popover, Drawer } from 'antd';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Link from 'next/link';
 import ProductCardContainer from '../productCardContainer/ProductCardContainer';
 import Cart from '../cart/Cart';
+import { useCart } from '@/context/CartContext';
 
 export default function Header({ footer }) {
+    const { cart } = useCart();
     const [open, setOpen] = useState(false);
     const onClose = () => {
         setOpen(false);
@@ -14,6 +16,11 @@ export default function Header({ footer }) {
     const check = () => {
         setOpen(!open);
     };
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
     return (
         <header className={styles.header}>
             <nav className={`${styles.nav} margin ${footer ? 'flex-column' : ''} ${footer ? 'footer' : ''}`} style={{ borderBottom: footer ? 'none' : '1px solid rgb(61, 61, 61)', height: footer ? "8rem" : "5.5rem" }}>
@@ -51,10 +58,23 @@ export default function Header({ footer }) {
                 </ul>
                 {footer ? null :
                     <ul>
-                        <li>
-                            <Popover placement="bottomRight" content={()=> <Cart />} trigger="click">
+                        <li className='flex'>
+                            <Popover placement="bottomRight" content={() => <Cart />} trigger="click">
                                 <AiOutlineShoppingCart className={styles.cart} size={28} />
                             </Popover>
+                            {isClient ? (
+                                <div className='center' style={{
+                                    height: '1.2rem',
+                                    width: '1.2rem',
+                                    background: 'var(--orange)',
+                                    color: 'white',
+                                    borderRadius: '50%',
+                                    position: 'relative',
+                                    top: '-0.5rem',
+                                    left: '-0.5rem',
+                                    visibility: cart.length>0 && isClient ? 'visible' : 'hidden'
+                                }}>{cart.length}</div>
+                            ) : null}
                         </li>
                     </ul>}
             </nav>

@@ -25,7 +25,7 @@ export default function Product({ id, name, price, desc, cart, reverse, src, lin
                 </p>
                 {cart ? <h3><span>$ </span>{price}</h3> : null}
                 <div className="flex">
-                    {cart ?
+                    {getItemQuantity(id) > 0 ?
                         <div className="flex" style={{ marginRight: '1rem' }}>
                             <div onClick={() => decreaseQuantity(id)} className="counter center">-</div>
                             <span className="counter center">{counter}</span>
