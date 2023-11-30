@@ -51,7 +51,7 @@ export function CartProvider({ children }) {
     }
 
     function getTotal(){
-        return cart.reduce((total, e) => total.price + e.price)
+        return cart.reduce((p, e) => { return p + (e.price * e.counter) }, 0);
     }
     
     return (

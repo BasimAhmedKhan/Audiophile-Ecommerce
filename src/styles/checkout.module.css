@@ -1,0 +1,31 @@
+.checkoutContainer {
+    height: auto;
+    justify-content: space-between;
+}
+
+.checkout {
+    flex-direction: column;
+    width: 65%;
+    background-color: #f1f1f1;
+}
+
+.summary {
+    flex-direction: column;
+    width: 33%;
+    background-color: #f1f1f1;
+}
+
+.bText{
+    font-size: 0.9rem;
+    letter-spacing: 0.1;
+    color: black;
+}
+
+.input{
+    font-size: 1rem;
+    height: 3.2rem;
+    color: var(--greyOnWhite);
+    font-weight: 500;
+    padding: 1rem;
+    border: 1px solid var(--greyOnWhite);
+}

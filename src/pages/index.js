@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
       <main>
-        <section className={`${styles.homeContainer}`}>
+        <section className={styles.homeContainer}>
           <div className={`${styles.home} center childsMargin margin flex-column resCenter resWidth margin0`}>
             <strong className='newProduct'>NEW PRODUCT</strong>
             <h1 className={styles.white}>XX99 MARK || <br /> HEADPHONES</h1>

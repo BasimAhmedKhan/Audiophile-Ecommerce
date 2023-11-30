@@ -24,6 +24,10 @@
     display: flex;
 }
 
+.col{
+    flex-direction: column;
+}
+
 .margin{
     margin: 0rem 7rem;
 }
@@ -66,6 +70,10 @@ a{
 
 .childsMargin>*{
     margin-bottom: 1rem;
+}
+
+.paddingChildren>*{
+    padding : 0rem 1rem;
 }
 
 .white{
