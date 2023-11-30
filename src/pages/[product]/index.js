@@ -54,8 +54,8 @@ export default function Index(props) {
 
 export async function getStaticProps({ params }) {
     const { product } = params;
-    // const res = await fetch(`https://audiophile-murex.vercel.app/api/products/${product}`);
-    const res = await fetch(`https://audiophile-prxx82jz4-basimahmedkhan.vercel.app/api/products/${product}`);
+    const res = await fetch(`https://audiophile-murex.vercel.app/api/products/${product}`);
+    // const res = await fetch(`https://audiophile-prxx82jz4-basimahmedkhan.vercel.app/api/products/${product}`);
     const data = await res.json();
     return {
         props: {

@@ -37,9 +37,9 @@ export default function Cart() {
                     {items}
                     <div className="flex center width100">
                         <h3 style={{ color: 'var(--greyOnWhite)' }}>TOTAL</h3>
-                        <h3>{"$ " + getTotal}</h3>
+                        <h3>{"$ " + (cart.reduce((p, e) =>{ return p + (e.price * e.counter) }, 0))}</h3>
                     </div>
-                    <Btn link={"/checkout"} bg={"orange"} size={'large'} text={'CHECK OUT'}  />
+                    <Btn link={"/checkout"} bg={"orange"} size={'large'} text={'CHECK OUT'} />
                 </div>
             </>
         );
