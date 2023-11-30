@@ -75,7 +75,7 @@ export default function Slug(props) {
 export async function getStaticProps({ params }) {
     const { product, slugs } = params;
     // const res = await fetch(`https://audiophile-murex.vercel.app/api/products/${product}/${slugs[0]}`);
-    const res = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+    const res = await fetch(`http://localhost:3000/api/products/${product}/${slugs[0]}`);
     const data = await res.json();
     return {
         props: {
