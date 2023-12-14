@@ -32,6 +32,10 @@
     margin: 0rem 7rem;
 }
 
+.marginTop{
+    margin-top: 1rem;
+}
+
 li{
     list-style-type: none;
 }

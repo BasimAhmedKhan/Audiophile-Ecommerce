@@ -51,7 +51,14 @@ export function CartProvider({ children }) {
     }
 
     function getTotal(){
-        return cart.reduce((p, e) => { return p + (e.price * e.counter) }, 0);
+        console.log(cart.reduce((p, e) => { p + (e.price * e.counter) }, 0));
+        return cart.reduce((p, e) => {
+            return( p + (e.price * e.counter)); 
+        }, 0);
+    }
+
+    function grandTotal(){
+        return (Math.round((getTotal())*0.2));
     }
     
     return (
@@ -62,7 +69,8 @@ export function CartProvider({ children }) {
             removeItems,
             getItemQuantity,
             cart,
-            getTotal }}>
+            getTotal,
+            grandTotal }}>
             {children}
         </CartContext.Provider>
     );
