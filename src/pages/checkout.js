@@ -27,7 +27,7 @@ export function Checkout() {
                         height={80}
                         alt="success image" />
                     <h2 style={{ fontSize: '2rem' }}>Thank You for Ordering</h2>
-                    <p style={{ color: 'var(--greyOnWhite)' }}>You'll receive an email shortly!</p>
+                    <p style={{ color: 'var(--greyOnWhite)' }}>You&apos;ll receive an email shortly!</p>
                     <div className="" onClick={removeItems}>
                         <Btn text={"BACK TO HOME"} bg={'orange'} link={'/'} />
                     </div>
@@ -88,7 +88,7 @@ export function Checkout() {
                     </form>
                     <div className={`${styles.summary} flex b-radius paddingChildren childsMargin resWidth marginTop`}>
                         <h2 style={{ letterSpacing: '0.1rem', marginTop: '1rem' }}>SUMMARY</h2>
-                        <div className="width100" style={{ margin: '2rem 0rem' }}>
+                        <div className="width100 childsMargin">
                             {cart.length > 0 ?
                                 cart.map((e) => {
                                     return (
